@@ -1,0 +1,110 @@
+.users-table {
+  width: 100%;
+  margin: 20px auto;
+}
+
+.users-table__table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Table Header */
+.users-table__header {
+  height: 75px;
+  background-color: #233131;
+  border-top: 2px solid #fff;
+}
+
+.users-table__header-row {
+  text-align: left;
+}
+
+.users-table__header-cell {
+  padding: 10px;
+  border-bottom: 1px solid #d5d5d5;
+}
+
+/* Table Body */
+.users-table__body .users-table__row:nth-child(odd) {
+  background-color: #fff;
+  color: #233131;
+}
+
+.users-table__body .users-table__row:nth-child(even) {
+  background-color: #f7f7f7;
+  color: #233131;
+}
+
+.users-table__row {
+  cursor: pointer;
+}
+
+.users-table__cell {
+  padding: 10px;
+  border-bottom: 1px solid #d5d5d5;
+}
+
+/* Apply the left alignment to the "Name" column using :not pseudo-class */
+.users-table__header-cell:not(.users-table__header-cell--name),
+.users-table__cell:not(.users-table__cell--name) {
+  text-align: center;
+}
+
+/* Table Footer */
+.users-table__footer {
+  height: 75px;
+  background-color: #233131;
+}
+
+.users-table__footer-cell {
+  padding: 10px;
+  text-align: center;
+}
+
+.users-table__add-button {
+  padding: 8px 12px;
+  font-size: 1em;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  background-color: #55ffb2;
+  color: #233131;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease;
+}
+
+.users-table__add-button:hover {
+  transform: translateY(-2px);
+  background-color: #40e092;
+}
+
+/* Action Buttons within Table Rows */
+.user-row__action-button {
+  margin-right: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #08aeea;
+  color: #fff;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.user-row__action-button:hover {
+  background-color: #1a75ff;
+}
+
+.user-row__action-button:focus {
+  /* outline: none; */
+  box-shadow: 0 0 5px rgba(77, 166, 255, 0.5);
+}
+
+.users-table__cell--name {
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.users-table__cell--name:hover {
+  background-color: #918c8c;
+}

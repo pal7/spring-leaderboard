@@ -1,0 +1,13 @@
+/* Main Dashboard Container */
+.user-dashboard {
+  position: relative;
+  min-width: 950px;
+  width: 90%;
+  height: 100%;
+  margin: 40px auto;
+  border-radius: 20px;
+  background: #233131;
+  color: #fff;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
