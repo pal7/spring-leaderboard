@@ -8,8 +8,6 @@ This is a React-based leaderboard application that allows users to manage a list
 - [Running the Application](#running-the-application)
 - [Running Tests](#running-tests)
 - [Project Structure](#project-structure)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Installation
 
@@ -19,7 +17,7 @@ To get started with the application, follow these steps:
 
    ```sh
    git clone https://github.com/pal7/spring-leaderboard.git
-   cd leaderboard-app
+   cd spring-leaderboard
    ```
 
 2. **Install dependencies:**
