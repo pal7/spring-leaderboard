@@ -7,6 +7,7 @@ export const filterUsers = (users, searchTerm) => {
 export const sortUsers = (users, sortField, sortOrder) => {
   return users.sort((a, b) => {
     if (!sortField) return 0;
+
     const aValue =
       typeof a[sortField] === "string"
         ? a[sortField].toLowerCase()
@@ -15,6 +16,7 @@ export const sortUsers = (users, sortField, sortOrder) => {
       typeof b[sortField] === "string"
         ? b[sortField].toLowerCase()
         : b[sortField];
+
     if (sortOrder === "asc") {
       return aValue > bValue ? 1 : -1;
     } else {

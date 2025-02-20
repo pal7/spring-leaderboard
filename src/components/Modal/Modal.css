@@ -1,9 +1,9 @@
 .modal {
-  position: fixed; /* Position relative to the viewport */
-  top: 50%; /* 50% from the top */
-  left: 50%; /* 50% from the left */
+  position: fixed;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
-  width: 30%;
+  width: 33%;
   border-radius: 16px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   animation: fade-slide-in-from-top 0.3s ease-in-out;
@@ -20,9 +20,9 @@ dialog:not([open]) {
 .modal__content {
   background-color: white;
   padding: 20px;
-  width: 100%; /* Adjust as needed */
+  width: 100%;
   max-width: 600px;
-  position: relative; /* Makes the close button position relative to this container */
+  position: relative;
 }
 
 .modal__close-button {

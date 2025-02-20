@@ -1,12 +1,11 @@
 import Modal from "../Modal/Modal";
-// import { useEffect } from "react";
 import "./UserDetailsDialog.css";
 
-const UserDetailsDialog = ({ user, onClose, ref }) => {
-  if (!user) return null; // Do not render if no user is selected
+const UserDetailsDialog = ({ user, ref }) => {
+  if (!user) return null;
 
   return (
-    <Modal ref={ref} className='user-details-modal'>
+    <Modal ref={ref} className='user-details-dialog'>
       <h2>User Details</h2>
       <p>
         <strong>Name:</strong> {user.name}
@@ -20,12 +19,12 @@ const UserDetailsDialog = ({ user, onClose, ref }) => {
       <p>
         <strong>Address:</strong>
         <span className='user-details-address'>
-          <p>
+          <span>
             {user.address.street}, {user.address.suite}
-          </p>
-          <p>
+          </span>
+          <span>
             {user.address.city}, {user.address.zipcode}
-          </p>
+          </span>
         </span>
       </p>
     </Modal>

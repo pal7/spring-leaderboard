@@ -1,3 +1,7 @@
+.add-user-dialog {
+  width: 50%;
+}
+
 .add-user-button {
   position: fixed;
   bottom: 20px;

@@ -48,7 +48,7 @@ export const updateUserPoints = async (userId, delta, users) => {
   }
 };
 
-export const handleDelete = async (userId, users) => {
+export const deleteUser = async (userId, users) => {
   try {
     const response = await fetch(
       `https://67afd011dffcd88a67879894.mockapi.io/api/v1/leaderboard/${userId}`,
@@ -64,7 +64,7 @@ export const handleDelete = async (userId, users) => {
   }
 };
 
-export const handleAddUser = async (newUser) => {
+export const addUser = async (newUser) => {
   try {
     const response = await fetch(
       "https://67afd011dffcd88a67879894.mockapi.io/api/v1/leaderboard",

@@ -42,10 +42,6 @@ export default function AddNewUserForm({ onAddUser, ref }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // if (newUserFormData.age < 0) {
-    //   setError("Age cannot be a negative number");
-    //   return;
-    // }
 
     const newUser = {
       name: newUserFormData.name,
@@ -82,7 +78,6 @@ export default function AddNewUserForm({ onAddUser, ref }) {
           value={newUserFormData.points}
           onChange={handleChange}
           required
-          min='0'
         >
           Points:
         </Input>
@@ -92,7 +87,7 @@ export default function AddNewUserForm({ onAddUser, ref }) {
           value={newUserFormData.age}
           onChange={handleChange}
           required
-          min='0'
+          min={0}
         >
           Age:
         </Input>

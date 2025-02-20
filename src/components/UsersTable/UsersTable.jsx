@@ -61,7 +61,7 @@ export default function UsersTable({
             <span className='visually-hidden'>Point Controls -</span>
           </th>
           <th
-            className='users-table__header-cell'
+            className='users-table__header-cell users-table__header-cell--points'
             role='columnheader'
             tabIndex='0'
             onClick={() => onSort("points")}

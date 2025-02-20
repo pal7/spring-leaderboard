@@ -5,12 +5,7 @@ import UserDetailsDialog from "./components/UserDetailsDialog/UserDetailsDialog"
 import AddUserDialog from "./components/AddUserDialog/AddUserDialog";
 import "./App.css";
 import "./global.css";
-import {
-  fetchData,
-  updateUserPoints,
-  handleDelete,
-  handleAddUser,
-} from "./helpers";
+import { fetchData, updateUserPoints, deleteUser, addUser } from "./helpers";
 import { filterUsers, sortUsers } from "./utils";
 
 function App() {
@@ -44,7 +39,6 @@ function App() {
 
   const handleSelectUser = (user) => {
     setSelectedUser(user);
-    // userDetailsDialogRef.current?.showModal();
   };
 
   const handleIncrement = async (userId) => {
@@ -67,7 +61,7 @@ function App() {
 
   const handleDeleteUser = async (userId) => {
     try {
-      const updatedUsers = await handleDelete(userId, users);
+      const updatedUsers = await deleteUser(userId, users);
       setUsers(updatedUsers);
     } catch (error) {
       console.error("Error deleting user:", error);
@@ -86,7 +80,7 @@ function App() {
 
   const handleAddNewUser = async (newUser) => {
     try {
-      const createdUser = await handleAddUser(newUser);
+      const createdUser = await addUser(newUser);
       setUsers((prevUsers) => [...prevUsers, createdUser]);
       addUserDialogRef.current?.close();
     } catch (error) {
@@ -100,17 +94,13 @@ function App() {
 
   const filteredUsers = filterUsers(users, searchTerm);
   const sortedUsers = sortUsers(filteredUsers, sortField, sortOrder);
-  const displayedUsers = sortedUsers.slice(0, 10); // Display only the first 10 users
+  const displayedUsers = sortedUsers.slice(0, 10);
 
   return (
     <div className='user-dashboard'>
       <Header onSearch={handleSearch}></Header>
       <AddUserDialog ref={addUserDialogRef} onAddUser={handleAddNewUser} />
-      <UserDetailsDialog
-        ref={userDetailsDialogRef}
-        user={selectedUser}
-        onClose={() => setSelectedUser(null)}
-      />
+      <UserDetailsDialog ref={userDetailsDialogRef} user={selectedUser} />
       <UsersTable
         users={displayedUsers}
         onIncrement={handleIncrement}

@@ -1,3 +1,7 @@
+.user-details-dialog {
+  width: 30%;
+}
+
 .user-details-address {
   display: inline-grid;
   padding-left: 4px;
