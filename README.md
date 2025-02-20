@@ -76,8 +76,8 @@ leaderboard-app/
 │   ├── helpers/
 │   │   ├── fetchData.js
 │   │   ├── updateUserPoints.js
-│   │   ├── handleDelete.js
-│   │   ├── handleAddUser.js
+│   │   ├── deleteUser.js
+│   │   ├── addUser.js
 │   │   └── ...
 │   ├── App.jsx
 │   ├── App.test.jsx
