@@ -32,7 +32,7 @@
 
 .users-table__header-cell--name:hover,
 .users-table__header-cell--points:hover {
-  background-color: #36add8;
+  background-color: #556970;
   color: #fff; /* Add white border on hover */
   border: 1px solid #fff;
 }
